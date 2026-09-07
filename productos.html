@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Workclothes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">WORKCLOTHES<span>.</span></a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html" class="active">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="nav-acciones">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito (<span id="cart-count">0</span>)</a>
+            <a href="login.html" class="btn-login">Ingresar</a>
+        </div>
+    </header>
+
+    <!-- Catálogo de Productos -->
+    <main class="contenedor-seccion">
+        <div class="encabezado-seccion">
+            <h2>Catálogo de Prendas</h2>
+            <p>Ropa de trabajo y uso diario confeccionada para máxima resistencia.</p>
+        </div>
+
+        <!-- Contenedor donde JavaScript inyectará las tarjetas -->
+        <div class="grilla-productos" id="contenedor-catalogo"></div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="footer-columna">
+            <h3>WORKCLOTHES<span>.</span></h3>
+            <p>Vestuario duradero y diseño utilitario.</p>
+        </div>
+        <div class="footer-columna">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blog</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>soporte@workclothes.cl</p>
+            <p>&copy; 2026 Workclothes Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts: primero cargamos los datos y luego la lógica de renderizado -->
+     <!-- Scripts -->
+    <script src="js/datos.js"></script>
+    <script src="js/carrito.js"></script>
+    <script>
+        const contenedor = document.getElementById('contenedor-catalogo');
+
+        function renderizarProductos() {
+            contenedor.innerHTML = '';
+            productos.forEach(producto => {
+                const tarjeta = document.createElement('article');
+                tarjeta.className = 'tarjeta-producto';
+                tarjeta.innerHTML = `
+                    <div class="imagen-contenedor">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                    </div>
+                    <div class="info-producto">
+                        <span class="categoria-tag">${producto.categoria}</span>
+                        <h3>${producto.nombre}</h3>
+                        <p class="descripcion-corta">${producto.descripcion}</p>
+                        <p class="precio">$${producto.precio.toLocaleString('es-CL')}</p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito(${producto.id})">Añadir al Carrito</button>
+                    </div>
+                `;
+                contenedor.appendChild(tarjeta);
+            });
+        }
+
+        renderizarProductos();
+    </script>
+</body>
+    
+</body>
+</html>

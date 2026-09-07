@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carrito de Compras - Workclothes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">WORKCLOTHES<span>.</span></a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="nav-acciones">
+            <a href="carrito.html" class="btn-carrito active">🛒 Carrito (<span id="cart-count">0</span>)</a>
+            <a href="login.html" class="btn-login">Ingresar</a>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal del Carrito -->
+    <main class="contenedor-seccion">
+        <div class="encabezado-seccion">
+            <h2>Mi Carrito de Compras</h2>
+            <p>Revisa las prendas seleccionadas antes de proceder al pago.</p>
+        </div>
+
+        <div class="layout-carrito">
+            
+            <!-- Columna Izquierda: Lista de Productos -->
+            <section class="items-carrito" id="contenedor-items">
+                <!-- Tarjeta de ejemplo visual (JavaScript la reemplazará dinámicamente) -->
+                <article class="item-fila">
+                    <img src="img/chaqueta.jpg" alt="Chaqueta Canvas" class="item-img">
+                    <div class="item-info">
+                        <h3>Chaqueta Canvas Heavy-Duty</h3>
+                        <p class="item-precio">$49.990</p>
+                    </div>
+                    <div class="item-controles">
+                        <button class="btn-cantidad">-</button>
+                        <span class="cantidad-num">1</span>
+                        <button class="btn-cantidad">+</button>
+                    </div>
+                    <p class="item-subtotal">$49.990</p>
+                    <button class="btn-eliminar" title="Eliminar producto">&times;</button>
+                </article>
+            </section>
+
+            <!-- Columna Derecha: Resumen de Compra y Cupones -->
+            <aside class="resumen-pedido">
+                <h3>Resumen de Compra</h3>
+
+                <div class="cupon-bloque">
+                    <label for="cupon-input">Cupón de descuento</label>
+                    <div class="cupon-input-grupo">
+                        <input type="text" id="cupon-input" placeholder="Ej: DUOC2026">
+                        <button type="button" class="btn-secundario">Aplicar</button>
+                    </div>
+                </div>
+
+                <div class="desglose-precio">
+                    <div class="linea-precio">
+                        <span>Subtotal:</span>
+                        <span id="subtotal-precio">$49.990</span>
+                    </div>
+                    <div class="linea-precio">
+                        <span>Descuento:</span>
+                        <span id="descuento-precio">$0</span>
+                    </div>
+                    <hr class="separador-resumen">
+                    <div class="linea-precio total-destacado">
+                        <span>Total:</span>
+                        <span id="total-precio">$49.990</span>
+                    </div>
+                </div>
+
+                <button class="btn-pagar" onclick="alert('Funcionalidad de pago simulada.')">PAGAR</button>
+                <a href="productos.html" class="enlace-seguir-comprando">&larr; Seguir comprando</a>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="footer-columna">
+            <h3>WORKCLOTHES<span>.</span></h3>
+            <p>Vestuario duradero y diseño utilitario.</p>
+        </div>
+        <div class="footer-columna">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>soporte@workclothes.cl</p>
+            <p>&copy; 2026 Workclothes Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts del Carrito -->
+    <script src="js/datos.js"></script>
+    <script src="js/carrito.js"></script>
+
+</body>
+</html>
