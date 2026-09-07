@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog y Guías - Workclothes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">WORKCLOTHES<span>.</span></a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html" class="active">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="nav-acciones">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito (<span id="cart-count">0</span>)</a>
+            <a href="login.html" class="btn-login">Ingresar</a>
+        </div>
+    </header>
+
+    <!-- Catálogo de Artículos -->
+    <main class="contenedor-seccion">
+        <div class="encabezado-seccion">
+            <h2>Guías, Mantenimiento y Estilo</h2>
+            <p>Consejos técnicos para alargar la vida útil de tus prendas de trabajo.</p>
+        </div>
+
+        <div class="grilla-blog">
+            
+            <!-- Entrada 1 -->
+            <article class="tarjeta-blog">
+                <div class="imagen-contenedor" style="height: 200px;">
+                    <img src="https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=600&q=80" alt="Chaqueta de lona">
+                </div>
+                <div class="info-blog">
+                    <span class="categoria-tag">Guía de Cuidados</span>
+                    <h3>Cómo lavar y conservar prendas de lona pesada</h3>
+                    <p class="fecha-articulo">18 de Abril, 2026</p>
+                    <p class="descripcion-blog">
+                        La lona de algodón de 12oz requiere lavados con agua fría y secado al aire para preservar la rigidez estructural de las fibras y evitar decoloraciones excesivas.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Entrada 2 -->
+            <article class="tarjeta-blog">
+                <div class="imagen-contenedor" style="height: 200px;">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Pantalón reforzado">
+                </div>
+                <div class="info-blog">
+                    <span class="categoria-tag">Historia y Estilo</span>
+                    <h3>El origen del pantalón con doble rodilla (Double Knee)</h3>
+                    <p class="fecha-articulo">12 de Abril, 2026</p>
+                    <p class="descripcion-blog">
+                        Diseñado en el siglo XX para obreros de construcción y carpinteros, el refuerzo de doble panel en las rodillas pasó de ser una necesidad fabril a un icono del vestuario urbano.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="footer-columna">
+            <h3>WORKCLOTHES<span>.</span></h3>
+            <p>Vestuario duradero y diseño utilitario.</p>
+        </div>
+        <div class="footer-columna">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>soporte@workclothes.cl</p>
+            <p>&copy; 2026 Workclothes Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workclothes - Ropa Duradera y Casual</title>
+
+    <!-- Hoja de estilos externa -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- 1. Encabezado y Navegación Principal -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">WORKCLOTHES<span>.</span></a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
+        <div class="nav-acciones">
+            <a href="carrito.html" class="btn-carrito"> Carrito (<span id="cart-count">0</span>)</a>
+            <a href="login.html" class="btn-login">Ingresar</a>
+        </div>
+    </header>
+
+    <!-- 2. Contenido Central -->
+    <main>
+        <!-- Banner Principal -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1>Ropa Duradera para el Trabajo y la Ciudad</h1>
+                <p>Prendas confeccionadas con lona pesada, costuras reforzadas y un corte casual pensado para soportar el uso diario más exigente.</p>
+                <div class="hero-botones">
+                    <a href="productos.html" class="btn-principal">Ver Productos</a>
+                    <a href="nosotros.html" class="btn-secundario">Nuestra Historia</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cuadrícula de Productos Destacados -->
+        <section class="contenedor-seccion">
+            <div class="encabezado-seccion">
+                <h2>Prendas Destacadas</h2>
+                <p>Materiales pesados de alta durabilidad y estilo utilitario.</p>
+            </div>
+
+            <div class="grilla-productos" id="productos-destacados">
+                
+                <!-- Producto 1 -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img src="img/chaqueta.jpg" alt="Chaqueta Canvas Resistente">
+                    </div>
+                    <div class="info-producto">
+                        <span class="categoria-tag">Chaquetas</span>
+                        <h3>Chaqueta Canvas Heavy-Duty</h3>
+                        <p class="descripcion-corta">Lona de algodón 12oz forrada, resistente al viento y la fricción.</p>
+                        <p class="precio">$49.990</p>
+                        <button class="btn-comprar" onclick="agregarAlCarrito(1)">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Pantalón Cargo Reforzado">
+                    </div>
+                    <div class="info-producto">
+                        <span class="categoria-tag">Pantalones</span>
+                        <h3>Pantalón Cargo Doble Rodilla</h3>
+                        <p class="descripcion-corta">Costuras triples y bolsillos utilitarios reforzados.</p>
+                        <p class="precio">$34.990</p>
+                        <button class="btn-comprar">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 3 -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img src="img/camisa.jpg" alt="Camisa Overshirt Franela">
+                    </div>
+                    <div class="info-producto">
+                        <span class="categoria-tag">Camisas</span>
+                        <h3>Overshirt de Franela Gruesa</h3>
+                        <p class="descripcion-corta">Tejido térmico resistente al desgaste diario y bajas temperaturas.</p>
+                        <p class="precio">$29.990</p>
+                        <button class="btn-comprar">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+                <!-- Producto 4 -->
+                <article class="tarjeta-producto">
+                    <div class="imagen-contenedor">
+                        <img src="img/polera1.webp" alt="Polera Heavyweight 240g">
+                    </div>
+                    <div class="info-producto">
+                        <span class="categoria-tag">Poleras</span>
+                        <h3>Polera Heavyweight 240g</h3>
+                        <p class="descripcion-corta">Algodón peinado denso con cuello reforzado anti-deformación.</p>
+                        <p class="precio">$16.990</p>
+                        <button class="btn-comprar">Añadir al Carrito</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 3. Pie de Página -->
+    <footer class="pie-pagina">
+        <div class="footer-columna">
+            <h3>WORKCLOTHES<span>.</span></h3>
+            <p>Diseño utilitario y vestuario resistente para trabajo de campo y vida urbana.</p>
+        </div>
+        <div class="footer-columna">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="productos.html">Catálogo Completo</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="blogs.html">Guías y Cuidados</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Atención al Cliente</h4>
+            <p>Email: soporte@workclothes.cl</p>
+            <p>Santiago, Chile</p>
+            <p>&copy; 2026 Workclothes Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Script para actualizar el contador -->
+    <script src="js/carrito.js"></script>
+</body>
+
+</body>
+</html>
