@@ -60,36 +60,7 @@
         </div>
     </footer>
 
-    <!-- Scripts: primero cargamos los datos y luego la lógica de renderizado -->
-     <!-- Scripts -->
-    <script src="js/datos.js"></script>
-    <script src="js/carrito.js"></script>
-    <script>
-        const contenedor = document.getElementById('contenedor-catalogo');
-
-        function renderizarProductos() {
-            contenedor.innerHTML = '';
-            productos.forEach(producto => {
-                const tarjeta = document.createElement('article');
-                tarjeta.className = 'tarjeta-producto';
-                tarjeta.innerHTML = `
-                    <div class="imagen-contenedor">
-                        <img src="${producto.imagen}" alt="${producto.nombre}">
-                    </div>
-                    <div class="info-producto">
-                        <span class="categoria-tag">${producto.categoria}</span>
-                        <h3>${producto.nombre}</h3>
-                        <p class="descripcion-corta">${producto.descripcion}</p>
-                        <p class="precio">$${producto.precio.toLocaleString('es-CL')}</p>
-                        <button class="btn-comprar" onclick="agregarAlCarrito(${producto.id})">Añadir al Carrito</button>
-                    </div>
-                `;
-                contenedor.appendChild(tarjeta);
-            });
-        }
-
-        renderizarProductos();
-    </script>
+   
 </body>
     
 </body>
