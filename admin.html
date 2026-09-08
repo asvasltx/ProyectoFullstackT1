@@ -122,47 +122,5 @@
         </section>
     </main>
 
-    <!-- Scripts -->
-    <script src="js/datos.js"></script>
-    <script>
-        // Cargar y pintar la tabla de inventario evaluando stock crítico
-        document.addEventListener('DOMContentLoaded', () => {
-            const tablaCuerpo = document.getElementById('cuerpo-tabla-stock');
-            if (!tablaCuerpo) return;
-
-            tablaCuerpo.innerHTML = '';
-
-            productos.forEach(item => {
-                const fila = document.createElement('tr');
-
-                // Si el stock actual es menor o igual al crítico, activamos la alerta
-                const esCritico = item.stock <= item.stockCritico;
-                const badgeHtml = esCritico
-                    ? `<span class="badge badge-critico">⚠️ Stock Crítico</span>`
-                    : `<span class="badge badge-ok">Normal</span>`;
-
-                fila.innerHTML = `
-                    <td><strong>${item.codigo}</strong></td>
-                    <td>${item.nombre}</td>
-                    <td>${item.categoria}</td>
-                    <td>$${item.precio.toLocaleString('es-CL')}</td>
-                    <td><strong>${item.stock}</strong> un.</td>
-                    <td>${item.stockCritico} un.</td>
-                    <td>${badgeHtml}</td>
-                `;
-
-                if (esCritico) {
-                    fila.classList.add('fila-alerta');
-                }
-
-                tablaCuerpo.appendChild(fila);
-            });
-        });
-
-        // Función demostrativa para la defensa en preguntas
-        function cambiarRol(nombre, nuevoRol) {
-            alert(`El usuario ${nombre} ahora tiene el rol de: ${nuevoRol}`);
-        }
-    </script>
 </body>
 </html>
