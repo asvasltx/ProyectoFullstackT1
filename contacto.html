@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Workclothes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <!-- Encabezado y Navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">WORKCLOTHES<span>.</span></a>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Catálogo</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="blogs.html">Blog</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+
+        <div class="nav-acciones">
+            <a href="carrito.html" class="btn-carrito">🛒 Carrito (<span id="cart-count">0</span>)</a>
+            <a href="login.html" class="btn-login">Ingresar</a>
+        </div>
+    </header>
+
+    <!-- Contenedor del Formulario -->
+    <main class="contenedor-seccion">
+        <div class="tarjeta-formulario" style="max-width: 550px;">
+            <div class="encabezado-form">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes dudas sobre tallas, envíos o ventas por mayor?</p>
+            </div>
+
+            <form id="form-contacto" novalidate>
+                <div class="grupo-campo">
+                    <label for="con-nombre">Nombre Completo</label>
+                    <input type="text" id="con-nombre" placeholder="Tu nombre y apellido">
+                    <span class="error-mensaje" id="error-con-nombre"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="con-email">Correo Electrónico</label>
+                    <input type="email" id="con-email" placeholder="ejemplo@gmail.com o @duoc.cl">
+                    <span class="error-mensaje" id="error-con-email"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="con-asunto">Asunto</label>
+                    <input type="text" id="con-asunto" placeholder="Motivo de tu consulta">
+                    <span class="error-mensaje" id="error-con-asunto"></span>
+                </div>
+
+                <div class="grupo-campo">
+                    <label for="con-mensaje">Mensaje (máximo 500 caracteres)</label>
+                    <textarea id="con-mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." style="resize: vertical; padding: 0.75rem; border: 1.5px solid var(--color-borde); border-radius: 4px; font-family: inherit; font-size: 0.95rem; outline: none;"></textarea>
+                    <span class="error-mensaje" id="error-con-mensaje"></span>
+                </div>
+
+                <button type="submit" class="btn-formulario">Enviar Consulta</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <div class="footer-columna">
+            <h3>WORKCLOTHES<span>.</span></h3>
+            <p>Vestuario duradero y diseño utilitario.</p>
+        </div>
+        <div class="footer-columna">
+            <h4>Navegación</h4>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Catálogo</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="footer-columna">
+            <h4>Contacto</h4>
+            <p>soporte@workclothes.cl</p>
+            <p>&copy; 2026 Workclothes Inc.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>
