@@ -702,3 +702,219 @@ body {
     }
 }
 
+.tarjeta-formulario {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 8px;
+    max-width: 440px;
+    margin: 1.5rem auto;
+    padding: 2.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.encabezado-form {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.encabezado-form h2 {
+    font-size: 1.7rem;
+    color: var(--color-oscuro);
+    margin-bottom: 0.3rem;
+}
+
+.encabezado-form p {
+    color: var(--color-texto-secundario);
+    font-size: 0.95rem;
+}
+
+.grupo-campo {
+    margin-bottom: 1.4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-campo label {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-oscuro);
+    margin-bottom: 0.4rem;
+}
+
+.grupo-campo input {
+    padding: 0.75rem 0.9rem;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.grupo-campo input:focus {
+    border-color: var(--color-acento);
+}
+
+.grupo-campo input.input-error {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.error-mensaje {
+    color: #dc2626;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.35rem;
+    display: none;
+}
+
+.btn-formulario {
+    width: 100%;
+    background-color: var(--color-acento);
+    color: #ffffff;
+    border: none;
+    padding: 0.85rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-formulario:hover {
+    background-color: var(--color-acento-hover);
+}
+
+.pie-formulario {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--color-texto-secundario);
+    margin-top: 1.5rem;
+}
+
+.pie-formulario a {
+    color: var(--color-acento);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pie-formulario a:hover {
+    text-decoration: underline;
+}
+
+.grupo-campo select {
+    padding: 0.75rem 0.9rem;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+.grupo-campo select:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+.grupo-campo select.input-error {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.seccion-admin {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.barra-titulo-admin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.barra-titulo-admin h3 {
+    font-size: 1.25rem;
+    color: var(--color-oscuro);
+}
+
+.info-tag {
+    font-size: 0.8rem;
+    color: var(--color-texto-secundario);
+    background-color: #f3f4f6;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+}
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    text-align: left;
+}
+
+.tabla-admin th {
+    background-color: #f8fafc;
+    color: var(--color-oscuro);
+    font-weight: 700;
+    padding: 0.85rem 1rem;
+    border-bottom: 2px solid var(--color-borde);
+}
+
+.tabla-admin td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-borde);
+    color: var(--color-texto-principal);
+}
+
+.tabla-admin tr:hover {
+    background-color: #f9fafb;
+}
+
+.fila-alerta {
+    background-color: #fffbeb !important;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.55rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.badge-normal {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.badge-ok {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-critico {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.select-rol {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 0.88rem;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
